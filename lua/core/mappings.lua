@@ -17,7 +17,6 @@ M.general = {
 
   n = {
     ["<Esc>"] = { "<cmd> noh <CR>", "Clear highlights" },
-    ["<leader><space>"] = { "<cmd> noh <CR>", "Clear highlights" },
     -- switch between windows
     ["<C-h>"] = { "<C-w>h", "Window left" },
     ["<C-l>"] = { "<C-w>l", "Window right" },
@@ -80,16 +79,14 @@ M.tabufline = {
 
   n = {
     -- cycle through buffers
-    -- ["<tab>"] = {
-    ["gl"] = {
+    ["<tab>"] = {
       function()
         require("nvchad.tabufline").tabuflineNext()
       end,
       "Goto next buffer",
     },
 
-    -- ["<S-tab>"] = {
-    ["gh"] = {
+    ["<S-tab>"] = {
       function()
         require("nvchad.tabufline").tabuflinePrev()
       end,
@@ -97,8 +94,7 @@ M.tabufline = {
     },
 
     -- close buffer + hide terminal buffer
-    -- ["<leader>x"] = {
-    ["<leader>bw"] = {
+    ["<leader>x"] = {
       function()
         require("nvchad.tabufline").close_buffer()
       end,
@@ -277,7 +273,6 @@ M.telescope = {
     ["<leader>ff"] = { "<cmd> Telescope find_files <CR>", "Find files" },
     ["<leader>fa"] = { "<cmd> Telescope find_files follow=true no_ignore=true hidden=true <CR>", "Find all" },
     ["<leader>fw"] = { "<cmd> Telescope live_grep <CR>", "Live grep" },
-    ["<leader>fs"] = { "<cmd> Telescope grep_string <CR>", "Grep string under cursor" },
     ["<leader>fb"] = { "<cmd> Telescope buffers <CR>", "Find buffers" },
     ["<leader>fh"] = { "<cmd> Telescope help_tags <CR>", "Help page" },
     ["<leader>fo"] = { "<cmd> Telescope oldfiles <CR>", "Find oldfiles" },

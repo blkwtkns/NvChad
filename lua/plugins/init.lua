@@ -262,24 +262,6 @@ local default_plugins = {
       require("which-key").setup(opts)
     end,
   },
-
-  {
-    "tpope/vim-fugitive",
-    cmd = {
-      "Git",
-      "Gread",
-      "Gstatus",
-    },
-  },
-
-  -- {
-  --   "blkwtkns/vim-sesh",
-  --   branch = "develop",
-  --   cmd = {
-  --     "SaveSesh",
-  --     "RestoreSesh",
-  --   },
-  -- },
 }
 
 local config = require("core.utils").load_config()
